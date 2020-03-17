@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		18332544241B2AD900BBFF28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18332542241B2AD900BBFF28 /* Main.storyboard */; };
 		18332546241B2AD900BBFF28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18332545241B2AD900BBFF28 /* Assets.xcassets */; };
 		18332549241B2AD900BBFF28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18332547241B2AD900BBFF28 /* LaunchScreen.storyboard */; };
+		18332552241F2CE400BBFF28 /* ConversationListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18332551241F2CE400BBFF28 /* ConversationListViewController.swift */; };
 		35ED56F5D91B32C19F627B8D /* Pods_RongCloudAppDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7268B7DBC3163E6DDF1CD2E3 /* Pods_RongCloudAppDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,8 @@
 		18332545241B2AD900BBFF28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18332548241B2AD900BBFF28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1833254A241B2AD900BBFF28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18332550241B380200BBFF28 /* RongCloudAppDemo_brige.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RongCloudAppDemo_brige.h; sourceTree = "<group>"; };
+		18332551241F2CE400BBFF28 /* ConversationListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationListViewController.swift; sourceTree = "<group>"; };
 		65C45A43F1FB629887DC794D /* Pods-RongCloudAppDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudAppDemo.release.xcconfig"; path = "Target Support Files/Pods-RongCloudAppDemo/Pods-RongCloudAppDemo.release.xcconfig"; sourceTree = "<group>"; };
 		7268B7DBC3163E6DDF1CD2E3 /* Pods_RongCloudAppDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RongCloudAppDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2A6B15E8DCB6D8C9354356C /* Pods-RongCloudAppDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RongCloudAppDemo.debug.xcconfig"; path = "Target Support Files/Pods-RongCloudAppDemo/Pods-RongCloudAppDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,11 +68,13 @@
 			children = (
 				1833253C241B2AD900BBFF28 /* AppDelegate.swift */,
 				1833253E241B2AD900BBFF28 /* SceneDelegate.swift */,
+				18332551241F2CE400BBFF28 /* ConversationListViewController.swift */,
 				18332540241B2AD900BBFF28 /* ViewController.swift */,
 				18332542241B2AD900BBFF28 /* Main.storyboard */,
 				18332545241B2AD900BBFF28 /* Assets.xcassets */,
 				18332547241B2AD900BBFF28 /* LaunchScreen.storyboard */,
 				1833254A241B2AD900BBFF28 /* Info.plist */,
+				18332550241B380200BBFF28 /* RongCloudAppDemo_brige.h */,
 			);
 			path = RongCloudAppDemo;
 			sourceTree = "<group>";
@@ -80,7 +85,6 @@
 				C2A6B15E8DCB6D8C9354356C /* Pods-RongCloudAppDemo.debug.xcconfig */,
 				65C45A43F1FB629887DC794D /* Pods-RongCloudAppDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -209,6 +213,7 @@
 			files = (
 				18332541241B2AD900BBFF28 /* ViewController.swift in Sources */,
 				1833253D241B2AD900BBFF28 /* AppDelegate.swift in Sources */,
+				18332552241F2CE400BBFF28 /* ConversationListViewController.swift in Sources */,
 				1833253F241B2AD900BBFF28 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +368,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yammii.http.RongCloudAppDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RongCloudAppDemo/RongCloudAppDemo_brige.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -382,6 +388,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yammii.http.RongCloudAppDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/RongCloudAppDemo/RongCloudAppDemo_brige.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

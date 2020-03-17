@@ -7,14 +7,20 @@
 //
 
 import UIKit
+@_exported import RongIMKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
+class AppDelegate: UIResponder, UIApplicationDelegate, RCIMUserInfoDataSource, RCIMGroupInfoDataSource {
+    
+    let RCIMAppKey = "k51hidwqkvhub"
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        RCIM.shared()?.initWithAppKey(RCIMAppKey)
+        RCIM.shared()?.userInfoDataSource = self
+        RCIM.shared()?.groupInfoDataSource = self
+        
         return true
     }
 
@@ -32,6 +38,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
 
-
+    // MARK: - RCIMUserInfoDataSource
+    
+    func getUserInfo(withUserId userId: String!, completion: ((RCUserInfo?) -> Void)!) {
+        print("userId\(String(describing: userId))")
+    }
+    
+    // MARK: - RCIMGroupInfoDataSource
+    func getGroupInfo(withGroupId groupId: String!, completion: ((RCGroup?) -> Void)!) {
+        print("groupId\(String(describing: groupId))")
+    }
+    
 }
 
